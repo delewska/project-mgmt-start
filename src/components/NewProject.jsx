@@ -19,7 +19,7 @@ export default function NewProject() {
       </menu>
       <div>
         <Input label="Title" />
-        <Input label="Description" textarea={true} />
+        <Input label="Description" textarea />
         <Input label="Due Date" />
       </div>
     </div>
