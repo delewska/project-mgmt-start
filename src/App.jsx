@@ -32,10 +32,12 @@ const handleAddNewProject = () => {
   }
   }
 
+console.log("projectData: ", projectData);
+  
 let content; 
 
   if(projectsState.selectedProjectId === null) {
-    content = <NewProject />
+    content = <NewProject onAddProject={handleAddProject) />
   } else if(projectsState.selectedProjectId === undefined) {
     content = <EntryPage onAddNewProject={handleAddNewProject} />
   };
