@@ -19,7 +19,7 @@ const handleAddNewProject = () => {
   });
 }
 
-  const handleAddProject = () => {
+  const handleAddProject = (projectData) => {
   setProjectsState(prevState => {
     const newProject = {
       ...projectsData,
