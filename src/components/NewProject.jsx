@@ -2,7 +2,7 @@ import React from "react";
 
 import Input from "./Input.jsx";
 
-export default function NewProject() {
+export default function NewProject({onAddProject}) {
  
   const title = React.useRef();
   const description = React.useRef();
@@ -12,7 +12,12 @@ export default function NewProject() {
     const enteredTitle = title.current.value;
     const enteredDescription = description.current.value;
     const enteredDueDate = dueDate.current.value;
-    //TODO validation
+
+    onAddProject({
+       title: enteredTitle,
+       discription: enteredDiscription,
+       dueDate: enteredDueDate
+   })
   }
   
    return (
