@@ -18,11 +18,19 @@ const handleAddNewProject = () => {
     };
   });
 }
+
+let content; 
+
+  if(projectsState.selectedProjectId === null) {
+    content = <NewProject />
+  } else if(projectsState.selectedProjectId === undefined) {
+    content = <EntryPage onAddNewProject={handleAddNewProject} />
+  };
   
   return (
     <main className="h-screen my-8 flex gap-8">
       <Sidebar onAddNewProject={handleAddNewProject} />
-      <EntryPage onAddNewProject={handleAddNewProject} />
+      {content}
     </main>
   );
 }
