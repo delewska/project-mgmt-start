@@ -3,7 +3,7 @@ import React from "react";
 import Button from "./Button.jsx";
 import noProjects from "../assets/no-projects.png";
 
-export default function EntryPage() {
+export default function EntryPage({onAddNewProject}) {
   return (
     <div className="mt-24 text-center w-2/3">
       <img
@@ -16,7 +16,7 @@ export default function EntryPage() {
         Select a project or get started with a new one
       </p>
       <p className="mt-8">
-        <Button>Create new project</Button>
+        <Button onClick={onAddNewProject}>Create new project</Button>
       </p>
     </div>
   );
