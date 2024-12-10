@@ -19,6 +19,19 @@ const handleAddNewProject = () => {
   });
 }
 
+  const handleAddProject = () => {
+  setProjectsState(prevState => {
+    const newProject = {
+      ...projectsData,
+      id: Math.random()
+    }
+    return {
+      ...prevState,
+      projects: [...prevState.projects, newProject]
+    }
+  }
+  }
+
 let content; 
 
   if(projectsState.selectedProjectId === null) {
