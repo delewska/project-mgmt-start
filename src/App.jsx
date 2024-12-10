@@ -21,12 +21,13 @@ const handleAddNewProject = () => {
 
   const handleAddProject = (projectData) => {
   setProjectsState(prevState => {
+    const projectId = Math.random();
     const newProject = {
       ...projectsData,
-      id: Math.random()
-    }
+      id: projectId,
     return {
       ...prevState,
+      selectedProjectId: undefined,
       projects: [...prevState.projects, newProject]
     }
   }
@@ -44,7 +45,7 @@ let content;
   
   return (
     <main className="h-screen my-8 flex gap-8">
-      <Sidebar onAddNewProject={handleAddNewProject} />
+      <Sidebar onAddNewProject={handleAddNewProject} projcts={projectsStates.projects} />
       {content}
     </main>
   );
