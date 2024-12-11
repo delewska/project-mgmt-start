@@ -3,6 +3,7 @@ import React from "react";
 import Sidebar from "./components/Sidebar.jsx";
 import NewProject from "./components/NewProject.jsx";
 import EntryPage from "./components/EntryPage.jsx";
+import SelectedProject from "./components/SelectedProject.jsx";
 
 function App() {
   const [projectsState, setProjectsState] = React.useState({
@@ -54,7 +55,11 @@ function App() {
 
   console.log("projectData: ", projectData);
 
-  let content;
+  const selectedProject = projectsState.projects.find(
+    (project) => project.id === projectsState.selectedProjectId
+  );
+
+  let content = <SelectedProject project={selectedProject} />;
 
   if (projectsState.selectedProjectId === null) {
     content = (
