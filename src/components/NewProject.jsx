@@ -3,7 +3,7 @@ import React from "react";
 import Input from "./Input.jsx";
 import Modal from "./Modal.jsx";
 
-export default function NewProject({ onAddProject }) {
+export default function NewProject({ onAddProject, onCancelProject }) {
   const modal = React.useRef();
   const title = React.useRef();
   const description = React.useRef();
@@ -25,7 +25,7 @@ export default function NewProject({ onAddProject }) {
 
     onAddProject({
       title: enteredTitle,
-      discription: enteredDiscription,
+      discription: enteredDescription,
       dueDate: enteredDueDate,
     });
   };
