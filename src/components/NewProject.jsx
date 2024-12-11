@@ -33,9 +33,13 @@ export default function NewProject({ onAddProject }) {
   return (
     <>
       <Modal ref={modal} buttonCaption="Okej">
-        <h2>Invalid input</h2>
-        <p>Looks like you forgot to enter a value.</p>
-        <p>Make sure you provide a valid value for every input</p>
+        <h2 className="text-xl font text-stone-700 my-4">Invalid input</h2>
+        <p className="text-stone-600 mb-4">
+          Looks like you forgot to enter a value.
+        </p>
+        <p className="text-stone-600 mb-4">
+          Make sure you provide a valid value for every input
+        </p>
       </Modal>
       <div className="w-[35rem] mt-16">
         <menu className="flex items-center justify-end gap-4 my-4">
