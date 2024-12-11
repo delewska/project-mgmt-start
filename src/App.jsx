@@ -48,7 +48,7 @@ function App() {
     <main className="h-screen my-8 flex gap-8">
       <Sidebar
         onAddNewProject={handleAddNewProject}
-        projcts={projectsStates.projects}
+        projcts={projectsState.projects}
       />
       {content}
     </main>
