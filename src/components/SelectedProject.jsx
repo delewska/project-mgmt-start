@@ -26,7 +26,7 @@ export default function SelectedProject({ project, onDeleteProject }) {
           {project.description}
         </p>
       </header>
-      TASK
+      <Tasks />
     </div>
   );
 }
